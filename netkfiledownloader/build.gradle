@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply plugin: 'com.vanniktech.maven.publish'
+
+android {
+    compileSdk rootProject.android.compileSdk//COMPILE_SDK_VERSION as int
+    namespace 'com.mozhimen.netkfiledownloader'
+
+    defaultConfig {
+        minSdk rootProject.android.minSdk//MIN_SDK_VERSION as int
+        targetSdk rootProject.android.targetSdk//TARGET_SDK_VERSION as int
+
+        manifestPlaceholders = [authoritiesSuffix: ".fileProvider",
+                                serviceActionSuffix: ".DownloadService"]
+        buildConfigField("String", "AUTHORITIES_SUFFIX", "\"${manifestPlaceholders['authoritiesSuffix']}\"")
+        buildConfigField("String", "SERVICE_ACTION_SUFFIX", "\"${manifestPlaceholders['serviceActionSuffix']}\"")
+        consumerProguardFiles "proguard-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+}
+
+//allprojects {
+//    plugins.withId("com.vanniktech.maven.publish") {
+//        mavenPublish {
+//            // 如果不设置，默认会上传到如下 URL，会提示 403
+//            // https://oss.sonatype.org/service/local/staging/deploy/maven2/xxxx'
+//            sonatypeHost = "S01"
+//        }
+//    }
+//}

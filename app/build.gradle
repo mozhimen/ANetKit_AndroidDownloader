@@ -2,23 +2,22 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION as int
-    buildToolsVersion BUILD_TOOLS_VERSION as String
+    compileSdk rootProject.android.compileSdk//COMPILE_SDK_VERSION as int
+    namespace rootProject.android.namespace
 
     defaultConfig {
-        applicationId "com.chiclaim.android.updater.app"
-        minSdkVersion MIN_SDK_VERSION as int
-        targetSdkVersion TARGET_SDK_VERSION as int
-        versionCode VERSION_CODE_UPDATER as int
-        versionName VERSION_NAME_UPDATER as String
-
+        applicationId rootProject.android.applicationId
+        minSdk rootProject.android.minSdk//MIN_SDK_VERSION as int
+        targetSdk rootProject.android.targetSdk//TARGET_SDK_VERSION as int
+        versionCode rootProject.android.versionCode//VERSION_CODE_UPDATER as int
+        versionName rootProject.android.versionName//VERSION_NAME_UPDATER as String
     }
 
     signingConfigs {
         release {
             keyAlias 'release123'
             keyPassword 'release123'
-            storeFile file('../release.ks')
+            storeFile file('./release.ks')
             storePassword 'release123'
         }
     }
@@ -37,10 +36,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-//    implementation project(':downloader')
-    implementation 'io.github.chiclaim:downloader:1.0.2'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
 
+    implementation project(':netkfiledownloader')
+    //implementation 'io.github.chiclaim:downloader:1.0.2'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 }
