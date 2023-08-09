@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 }
 
 include ':app'
-rootProject.name = "NetKit_FileDownloader"
-include ':netkfiledownloader'
+rootProject.name = "NetKit_File"
+include ':netk_file'

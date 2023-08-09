@@ -1,8 +1,8 @@
 ext {
     android = [
             compileSdk     : 33,
-            namespace  : "com.mozhimen.netk_filedownloader_test",
-            applicationId  : "com.mozhimen.netk_filedownloader_test",
+            namespace      : "com.mozhimen.netk_file_test",
+            applicationId  : "com.mozhimen.netk_file_test",
             minSdk         : 21,
             targetSdk      : 33,
             versionCode    : 1,

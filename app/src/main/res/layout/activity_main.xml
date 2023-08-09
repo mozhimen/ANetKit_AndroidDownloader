@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context="com.mozhimen.netk_filedownload_test.MainActivity">
+        tools:context="com.mozhimen.netk_file_test.MainActivity">
 
         <EditText
             android:id="@+id/et_download"
