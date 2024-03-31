@@ -16,5 +16,10 @@ dependencyResolutionManagement {
 }
 
 include ':app'
-rootProject.name = "NetKit_File"
-include ':netk_file'
+rootProject.name = "ANetKit_File_Downloader"
+include ':netk_file_downloader'
+//SwiftKit
+include ':SwiftKit'
+project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
+include ':SwiftKit:basick'
+

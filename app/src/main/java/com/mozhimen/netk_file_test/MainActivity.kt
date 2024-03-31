@@ -15,10 +15,20 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.mozhimen.netk.file.downloader.DOWNLOAD_ENGINE_EMBED
+import com.mozhimen.netk.file.downloader.DOWNLOAD_ENGINE_SYSTEM_DM
+import com.mozhimen.netk.file.downloader.DownloadListener
+import com.mozhimen.netk.file.downloader.DownloadRequest
+import com.mozhimen.netk.file.downloader.NOTIFIER_HIDDEN
+import com.mozhimen.netk.file.downloader.NOTIFIER_VISIBLE
+import com.mozhimen.netk.file.downloader.NOTIFIER_VISIBLE_NOTIFY_COMPLETED
+import com.mozhimen.netk.file.downloader.NOTIFIER_VISIBLE_NOTIFY_ONLY_COMPLETION
+import com.mozhimen.netk.file.downloader.UpgradeDialogActivity
+import com.mozhimen.netk.file.downloader.UpgradeDialogInfo
 import com.mozhimen.netk_file.*
-import com.mozhimen.netk_file.util.DownloadEngine
-import com.mozhimen.netk_file.util.goNotificationSettings
-import com.mozhimen.netk_file.util.settingPackageInstall
+import com.mozhimen.netk.file.downloader.util.DownloadEngine
+import com.mozhimen.netk.file.downloader.util.goNotificationSettings
+import com.mozhimen.netk.file.downloader.util.settingPackageInstall
 
 class MainActivity : AppCompatActivity(), DownloadListener {
 
