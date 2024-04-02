@@ -10,8 +10,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.app.NotificationCompat
 import com.mozhimen.basick.elemk.android.app.cons.CDownloadManager
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
-import com.mozhimen.componentk.R
-import com.mozhimen.componentk.netk.file.download.annors.ADownloadStatus
+import com.mozhimen.netk.file.downloader.annors.ADownloadStatus
 import java.io.File
 
 

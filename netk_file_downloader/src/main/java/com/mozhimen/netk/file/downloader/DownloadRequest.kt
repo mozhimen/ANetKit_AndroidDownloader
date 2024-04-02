@@ -3,16 +3,14 @@ package com.mozhimen.netk.file.downloader
 import android.content.Context
 import android.net.Uri
 import androidx.annotation.DrawableRes
-import com.mozhimen.basick.utilk.android.util.UtilKLog.et
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.basick.utilk.android.widget.showToast
 import com.mozhimen.basick.utilk.androidx.core.UtilKNotificationManagerCompat
 import com.mozhimen.basick.utilk.bases.BaseUtilK
-import com.mozhimen.componentk.BuildConfig
-import com.mozhimen.componentk.R
 import com.mozhimen.netk.file.downloader.annors.ADownloadEngine
-import com.mozhimen.componentk.netk.file.download.annors.ANotificationVisibility
-import com.mozhimen.componentk.netk.file.download.bases.BaseDownloader
-import com.mozhimen.componentk.netk.file.download.commons.IDownloadListener
+import com.mozhimen.netk.file.downloader.annors.ANotificationVisibility
+import com.mozhimen.netk.file.downloader.bases.BaseDownloader
+import com.mozhimen.netk.file.downloader.commons.IDownloadListener
 import java.io.File
 
 /**
@@ -222,7 +220,7 @@ class DownloadRequest(
      */
     fun startDownload(): Boolean {
         if (DownloaderManager.isRunning(this)) {
-            if (BuildConfig.DEBUG) et(TAG, "下载任务已经存在")
+            if (BuildConfig.DEBUG) UtilKLogWrapper.e(TAG, "下载任务已经存在")
             return false
         }
         if (notificationVisibility != ANotificationVisibility.HIDDEN && showNotificationDisableTip&&!UtilKNotificationManagerCompat.areNotificationsEnabled()) {
