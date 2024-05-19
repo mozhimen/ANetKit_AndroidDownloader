@@ -9,7 +9,7 @@ android {
     defaultConfig {
         minSdk 19//MIN_SDK_VERSION as int
 //        targetSdk rootProject.android.targetSdk//TARGET_SDK_VERSION as int
-
+        multiDexEnabled true
         manifestPlaceholders = [authoritiesSuffix: ".fileProvider",
                                 serviceActionSuffix: ".DownloadService"]
         buildConfigField("String", "AUTHORITIES_SUFFIX", "\"${manifestPlaceholders['authoritiesSuffix']}\"")
