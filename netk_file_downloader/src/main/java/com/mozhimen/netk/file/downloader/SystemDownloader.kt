@@ -27,7 +27,7 @@ internal class SystemDownloader(request: DownloadRequest) : BaseDownloader(reque
                 R.string.netk_file_component_disable,
                 Toast.LENGTH_SHORT
             ).show()
-            UtilKActivityStart.startApplicationDetailsSettings(request.context)
+            UtilKActivityStart.startSettingApplicationDetailsSettings(request.context)
             //InstallUtils.showDownloadComponentSetting(request.context)
             return
         }

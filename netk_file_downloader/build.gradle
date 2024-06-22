@@ -38,6 +38,7 @@ dependencies {
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
 //    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation project(':SwiftKit:basick')
+    implementation project(':ACacheKit:cachek_sharedpreferences')
 }
 
 //allprojects {
