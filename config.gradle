@@ -1,6 +1,6 @@
 ext {
     android = [
-            compileSdk     : 33,
+            compileSdk     : 34,
             namespace      : "com.mozhimen.netk_file_test",
             applicationId  : "com.mozhimen.netk_file_test",
             minSdk         : 21,
