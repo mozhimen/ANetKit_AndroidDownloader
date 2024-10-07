@@ -8,8 +8,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.annotation.DrawableRes
 import androidx.core.app.NotificationCompat
-import com.mozhimen.basick.elemk.android.app.cons.CDownloadManager
-import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
+import com.mozhimen.kotlin.elemk.android.app.cons.CDownloadManager
+import com.mozhimen.kotlin.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.netk.file.downloader.annors.ADownloadStatus
 import java.io.File
 

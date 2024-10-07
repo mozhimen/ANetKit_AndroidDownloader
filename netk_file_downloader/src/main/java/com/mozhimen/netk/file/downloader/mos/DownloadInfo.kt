@@ -1,7 +1,7 @@
 package com.mozhimen.netk.file.downloader.mos
 
 import android.net.Uri
-import com.mozhimen.basick.elemk.android.app.cons.CDownloadManager
+import com.mozhimen.kotlin.elemk.android.app.cons.CDownloadManager
 
 /**
  *

@@ -3,10 +3,10 @@ package com.mozhimen.netk.file.downloader
 import android.content.Context
 import android.net.Uri
 import androidx.annotation.DrawableRes
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
-import com.mozhimen.basick.utilk.android.widget.showToast
-import com.mozhimen.basick.utilk.androidx.core.UtilKNotificationManagerCompat
-import com.mozhimen.basick.utilk.bases.BaseUtilK
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.android.widget.showToast
+import com.mozhimen.kotlin.utilk.androidx.core.UtilKNotificationManagerCompat
+import com.mozhimen.kotlin.utilk.bases.BaseUtilK
 import com.mozhimen.netk.file.downloader.annors.ADownloadEngine
 import com.mozhimen.netk.file.downloader.annors.ANotificationVisibility
 import com.mozhimen.netk.file.downloader.bases.BaseDownloader

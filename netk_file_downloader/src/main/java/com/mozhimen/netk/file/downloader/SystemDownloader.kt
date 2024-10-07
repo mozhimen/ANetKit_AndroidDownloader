@@ -3,12 +3,12 @@ package com.mozhimen.netk.file.downloader
 import android.app.DownloadManager
 import android.net.Uri
 import android.widget.Toast
-import com.mozhimen.basick.elemk.android.app.cons.CDownloadManager
-import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
-import com.mozhimen.basick.utilk.android.content.UtilKPackage
-import com.mozhimen.basick.utilk.android.net.uri2strFilePathName
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.elemk.android.app.cons.CDownloadManager
+import com.mozhimen.kotlin.utilk.android.app.UtilKActivityStart
+import com.mozhimen.kotlin.utilk.android.content.UtilKPackage
+import com.mozhimen.kotlin.utilk.android.net.uri2strFilePathName
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.netk.file.downloader.bases.BaseDownloader
 import java.io.File
 
