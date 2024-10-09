@@ -26,7 +26,7 @@ object InstallUtils : BaseUtilK() {
         val realFilePath = uri.uri2strFilePathName() ?: return false
         val fileApkInfo = getFileApkSignature(context, realFilePath) ?: return false
         try {
-            val packageInfo = UtilKPackageInfo.get_ofGetConfigurations(context)!!
+            val packageInfo = UtilKPackageInfo.get_ofGET_CONFIGURATIONS(context, context.packageName)!!
             if (BuildConfig.DEBUG) {
                 UtilKLogWrapper.e(TAG, "apk file package=${fileApkInfo.packageName},versionCode=${fileApkInfo.versionCode}")
                 UtilKLogWrapper.e(TAG, "current package=${packageInfo.packageName},versionCode=${packageInfo.versionCode}")
